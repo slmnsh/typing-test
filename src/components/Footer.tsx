@@ -31,12 +31,12 @@ export default function Footer() {
     const [showList, setShowList] = useState<boolean>(false);
     useEffect(() => {
         const URL =
-            "https://api.github.com/repos/salmannotkhan/typing-test/contributors";
+            "https://api.github.com/repos/slmn-sh/typing-test/contributors";
         fetch(URL)
             .then((res) => res.json())
             .then((data: Contributor[]) =>
                 data.filter(
-                    (contributor) => contributor.login !== "salmannotkhan"
+                    (contributor) => contributor.login !== "slmn-sh"
                 )
             )
             .then((filtered) => setContributors(filtered));
@@ -54,7 +54,7 @@ export default function Footer() {
                 <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://www.github.com/salmannotkhan/typing-test">
+                    href="https://www.github.com/slmn-sh/typing-test">
                     <span>&lt;/&gt;</span> github
                 </a>
                 <span>
@@ -62,8 +62,8 @@ export default function Footer() {
                     <a
                         target="_blank"
                         rel="noreferrer"
-                        href="https://www.github.com/salmannotkhan">
-                        @salmannotkhan
+                        href="https://www.github.com/slmn-sh">
+                        @slmn-sh
                     </a>
                 </span>
                 {showList ? (
